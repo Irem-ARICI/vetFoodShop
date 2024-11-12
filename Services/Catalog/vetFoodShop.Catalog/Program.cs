@@ -6,6 +6,8 @@ using vetFoodShop.Catalog.Services.ProductImageServices;
 using vetFoodShop.Catalog.Services.ProductServices;
 using vetFoodShop.Catalog.Settings;
 using System.Reflection;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 
 
@@ -18,11 +20,22 @@ builder.Services.AddScoped<IProductImageService, ProductImageService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
+//builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
+//builder.Services.AddScoped<IDatabaseSettings>(sp =>
+//{
+//    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+//});
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
-builder.Services.AddScoped<IDatabaseSettings>(sp =>
+builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
+
+builder.Services.AddScoped<MongoDBService>();
+
+
+//builder.Services.AddSingleton<MongoDBService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
