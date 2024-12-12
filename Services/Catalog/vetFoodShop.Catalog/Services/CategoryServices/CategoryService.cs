@@ -28,16 +28,17 @@ namespace vetFoodShop.Catalog.Services.CategoryServices
 
         public async Task DeleteCategoryAsync(string id)
         {
-            await _categoryCollection.DeleteOneAsync(x => x.CategoryID == id);
+            await _categoryCollection.DeleteOneAsync(x => x.CategoryId == id);
         }
 
         public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
-            var values = await _categoryCollection.Find<Category>(x => x.CategoryID == id).FirstOrDefaultAsync();
+            var values = await _categoryCollection.Find<Category>(x => x.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(values);
         }
 
-        public async Task<List<ResultCategoryDto>> GettAllCategories()
+
+        public async Task<List<ResultCategoryDto>> GettAllCategoryAsync()
         {
             var values = await _categoryCollection.Find(x => true).ToListAsync();
             return (_mapper.Map<List<ResultCategoryDto>>(values));
@@ -46,7 +47,7 @@ namespace vetFoodShop.Catalog.Services.CategoryServices
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
             var values = _mapper.Map<Category>(updateCategoryDto);
-            await _categoryCollection.FindOneAndReplaceAsync(x => x.CategoryID == updateCategoryDto.CategoryId, values);
+            await _categoryCollection.FindOneAndReplaceAsync(x => x.CategoryId == updateCategoryDto.CategoryId, values);
         }
     }
 }

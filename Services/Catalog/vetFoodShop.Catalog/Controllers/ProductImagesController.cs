@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿ using Microsoft.AspNetCore.Mvc;
 using vetFoodShop.Catalog.Dtos.ProductDetailDtos;
 using vetFoodShop.Catalog.Dtos.ProductImagesDtos;
 using vetFoodShop.Catalog.Services.ProductImageServices;
-using vetFoodShop.Catalog.Services.ProductImageServices;
+
 
 namespace vetFoodShop.Catalog.Controllers
 {

@@ -18,7 +18,7 @@ namespace vetFoodShop.Catalog.Services.ProductImageServices
             {
                 var client = new MongoClient(_databaseSettings.ConnectionString);
                 var database = client.GetDatabase(_databaseSettings.DatabaseName);
-                _ProductImageCollection = database.GetCollection<ProductImage>(_databaseSettings.CategoryCollectionName);
+                _ProductImageCollection = database.GetCollection<ProductImage>(_databaseSettings.ProductImageCollectionName);
                 _mapper = mapper;   // _mapper = mapper; --> adam böyle yaptı da neyyseğ (this.mapper = mapper; ) bendeki buydu
             }
 

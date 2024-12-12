@@ -2,9 +2,12 @@
 using System.Security.Cryptography.X509Certificates;
 using vetFoodShop.Catalog.Dtos.CategoryDtos;
 using vetFoodShop.Catalog.Services.CategoryServices;
+using vetFoodShop.Catalog.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace vetFoodShop.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
@@ -19,7 +22,7 @@ namespace vetFoodShop.Catalog.Controllers
         [HttpGet]
         public async Task<IActionResult> CategoryList()
         {
-            var values = await _categoryService.GettAllCategories();
+            var values = await _categoryService.GettAllCategoryAsync();
             return Ok(values);
         }
 
@@ -50,8 +53,5 @@ namespace vetFoodShop.Catalog.Controllers
             await _categoryService.UpdateCategoryAsync(updateCategoryDto);
             return Ok("Kategori başarıyla güncellendi!!");
         }
-
-
-
     }
 }

@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using vetFoodShop.Catalog.Services.CategoryServices;
 using vetFoodShop.Catalog.Services.ProductDetailDetailServices;
 using vetFoodShop.Catalog.Services.ProductDetailServices;
@@ -12,6 +12,13 @@ using MongoDB.Driver;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+//{
+//    opt.Authority = builder.Configuration["IdentityServerUrl"];
+//    opt.Audience = "ResourceCatalog";
+//    opt.RequireHttpsMetadata = false;
+//});           //  3.23-> authentication category'in Get işleminde hata veriyor sanırım bu yüzden
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();

@@ -14,7 +14,7 @@ namespace vetFoodShop.Catalog.Services.ProductServices
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);   // Önce bağlantı adresi getirildi
             var database = client.GetDatabase(_databaseSettings.DatabaseName);  // Sonra veritabanı adı getirildi
-            _productCollection = database.GetCollection<Product>(_databaseSettings.ProductDetailCollectionName);    // sonra da tablo getirildi :)
+            _productCollection = database.GetCollection<Product>(_databaseSettings.ProductCollectionName);    // sonra da tablo getirildi :)
             _mapper = mapper;
         }
 
