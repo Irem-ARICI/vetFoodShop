@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace vetFoodShop.Catalog.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

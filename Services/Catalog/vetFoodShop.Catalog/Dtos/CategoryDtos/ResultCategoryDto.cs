@@ -4,6 +4,6 @@
     {
         public string CategoryId { get; set; }  // ID YAZMIŞŞ
         public string CategoryName { get; set; }
-        public string ImageUrl { get; set; }
+        //public string ImageUrl { get; set; }
     }
 }

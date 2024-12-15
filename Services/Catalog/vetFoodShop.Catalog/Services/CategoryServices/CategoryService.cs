@@ -2,16 +2,17 @@
 using MongoDB.Driver;
 using vetFoodShop.Catalog.Dtos.CategoryDtos;
 using vetFoodShop.Catalog.Entities;
+using vetFoodShop.Catalog.Services.CategoryServices;
 using vetFoodShop.Catalog.Settings;
 
 namespace vetFoodShop.Catalog.Services.CategoryServices
 {
     public class CategoryService : ICategoryService
     {
-        private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
+        private readonly IMongoCollection<Category> _categoryCollection;
 
-        public CategoryService(IMapper mapper,IDatabaseSettings _databaseSettings)
+        public CategoryService(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
@@ -21,9 +22,9 @@ namespace vetFoodShop.Catalog.Services.CategoryServices
 
         public async Task CreateCategoryAsync(CreateCategoryDto createCategoryDto)
         {
-           // throw new NotImplementedException();
-             var value = _mapper.Map<Category>(createCategoryDto);
-             await _categoryCollection.InsertOneAsync(value);
+            // throw new NotImplementedException();
+            var value = _mapper.Map<Category>(createCategoryDto);
+            await _categoryCollection.InsertOneAsync(value);
         }
 
         public async Task DeleteCategoryAsync(string id)
@@ -41,7 +42,7 @@ namespace vetFoodShop.Catalog.Services.CategoryServices
         public async Task<List<ResultCategoryDto>> GettAllCategoryAsync()
         {
             var values = await _categoryCollection.Find(x => true).ToListAsync();
-            return (_mapper.Map<List<ResultCategoryDto>>(values));
+            return _mapper.Map<List<ResultCategoryDto>>(values);
         }
 
         public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
