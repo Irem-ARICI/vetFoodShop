@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vetFoodShop.Order.Domain.Entities
+namespace vetFoodShop.Order.Application.Features.CQRS.Results.OrderDetailResults
 {
-    public class OrderDetail
+    public class GetOrderDetailQueryResult
     {
         public int OrderDetailId { get; set; }
         public string ProductId { get; set; }
