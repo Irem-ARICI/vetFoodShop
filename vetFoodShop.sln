@@ -21,13 +21,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{93F8A692-4E24-40B1-99F4-3F7BD5DFA7F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Order.Domain", "Services\Order\Core\vetFoodShop.Order.Domain\vetFoodShop.Order.Domain.csproj", "{FF015213-1160-4D98-A2B1-4ED70FB74196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Order.Domain", "Services\Order\Core\vetFoodShop.Order.Domain\vetFoodShop.Order.Domain.csproj", "{FF015213-1160-4D98-A2B1-4ED70FB74196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Order.Application", "Services\Order\Core\vetFoodShop.Order.Application\vetFoodShop.Order.Application.csproj", "{5D94CA12-B51A-46AE-BA73-A9250B35D0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Order.Application", "Services\Order\Core\vetFoodShop.Order.Application\vetFoodShop.Order.Application.csproj", "{5D94CA12-B51A-46AE-BA73-A9250B35D0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Order.Persistence", "Services\Order\Infrastructure\vetFoodShop.Order.Persistence\vetFoodShop.Order.Persistence.csproj", "{4CC94B55-76F9-4890-860F-A40C8D067C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Order.Persistence", "Services\Order\Infrastructure\vetFoodShop.Order.Persistence\vetFoodShop.Order.Persistence.csproj", "{4CC94B55-76F9-4890-860F-A40C8D067C81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Order.WebApi", "Services\Order\Presentation\vetFoodShop.Order.WebApi\vetFoodShop.Order.WebApi.csproj", "{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Order.WebApi", "Services\Order\Presentation\vetFoodShop.Order.WebApi\vetFoodShop.Order.WebApi.csproj", "{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{B898CA2F-6D59-4A6F-8BA8-34FC97969849}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.IdentityServer", "IdentityServer\vetFoodShop.IdentityServer\vetFoodShop.IdentityServer.csproj", "{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{9EB827AD-5DE9-4E12-97BA-61B18B9D1E54}"
+	ProjectSection(SolutionItems) = preProject
+		PortainerCmd.txt = PortainerCmd.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +68,10 @@ Global
 		{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +89,7 @@ Global
 		{5D94CA12-B51A-46AE-BA73-A9250B35D0FD} = {149B7326-9DE8-4128-BC4E-11146B75807C}
 		{4CC94B55-76F9-4890-860F-A40C8D067C81} = {076484F3-F16E-4340-B6C0-5D76730AFB13}
 		{03EB9EC0-A074-4FF6-80DD-0F3EE6ABAF8B} = {93F8A692-4E24-40B1-99F4-3F7BD5DFA7F2}
+		{C12560BD-5B9A-4AE8-ADBD-F42A8E8284A0} = {B898CA2F-6D59-4A6F-8BA8-34FC97969849}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8153E818-E5A6-43FD-B5C0-04096A5B29FA}

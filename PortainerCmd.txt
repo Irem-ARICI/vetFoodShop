@@ -1,0 +1,3 @@
+﻿docker volume create portainer_data
+
+// devamını çok merak ediyorsan 71.video koş bak (sanki hoca ileride bu klasörü siliyor ondan çok da sallamasak olurr :) )
