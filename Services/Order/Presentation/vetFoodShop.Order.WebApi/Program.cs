@@ -3,9 +3,12 @@ using vetFoodShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using vetFoodShop.Order.Application.Features.CQRS.Queries.AddressQueries;
 using vetFoodShop.Order.Application.Interfaces;
 using vetFoodShop.Order.Application.Services;
+using vetFoodShop.Order.Persistence.Context;
 using vetFoodShop.Order.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddApplicationServices(builder.Configuration);

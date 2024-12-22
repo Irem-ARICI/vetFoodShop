@@ -12,7 +12,7 @@ namespace vetFoodShop.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)   // bunu yazmak için=> override on.. yazınca çıkıyor :))
         {
-            optionsBuilder.UseSqlServer("Server=...;intial Catalog=vetFoodShopOrderDb;integrated Securtiy=true");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;initial Catalog=vetFoodShopOrderDb;User=sa;Password=0123456789aA*;TrustServerCertificate=True"); // ;integrated Security=true
         }
 
         public DbSet<Address> Addresses { get; set; }

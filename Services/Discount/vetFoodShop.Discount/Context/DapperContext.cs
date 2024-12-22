@@ -18,7 +18,7 @@ namespace vetFoodShop.Discount.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-C22ONAA;initial Catalog=vetFoodShopCatalogDb;integrated Security=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-C22ONAA;initial Catalog=vetFoodShopCatalogDb;integrated Security=true");    // ;TrustServerCertificate=True
         }
 
         public DbSet<Coupon> Coupons { get; set; }
