@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using vetFoodShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
@@ -7,6 +8,7 @@ using vetFoodShop.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
 
 namespace vetFoodShop.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailsController : ControllerBase

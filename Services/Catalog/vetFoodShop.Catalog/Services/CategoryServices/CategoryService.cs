@@ -41,7 +41,7 @@ namespace vetFoodShop.Catalog.Services.CategoryServices
 
         public async Task<List<ResultCategoryDto>> GettAllCategoryAsync()
         {
-            var values = await _categoryCollection.Find(x => true).ToListAsync();
+            var values = await _categoryCollection.Find<Category>(x => true).ToListAsync();
             return _mapper.Map<List<ResultCategoryDto>>(values);
         }
 

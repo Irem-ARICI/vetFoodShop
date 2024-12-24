@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using vetFoodShop.Catalog.Dtos.CategoryDtos;
 using vetFoodShop.Catalog.Dtos.ProductDtos;
 using vetFoodShop.Catalog.Services.CategoryServices;
@@ -6,6 +7,7 @@ using vetFoodShop.Catalog.Services.ProductServices;
 
 namespace vetFoodShop.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
