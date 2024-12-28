@@ -40,15 +40,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{D84384A6-5423-4BEC-9D85-498121F30A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Cargo.EntityLayer", "Services\Cargo\vetFoodShop.Cargo.EntityLayer\vetFoodShop.Cargo.EntityLayer.csproj", "{C16CBFA5-95D2-4FE0-B7A5-30435923D800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Cargo.EntityLayer", "Services\Cargo\vetFoodShop.Cargo.EntityLayer\vetFoodShop.Cargo.EntityLayer.csproj", "{C16CBFA5-95D2-4FE0-B7A5-30435923D800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Cargo.BusinessLayer", "Services\Cargo\vetFoodShopShop.Cargo.BusinessLayer\vetFoodShop.Cargo.BusinessLayer.csproj", "{513DAE79-75C5-49D8-993C-8EA4259A7404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Cargo.BusinessLayer", "Services\Cargo\vetFoodShopShop.Cargo.BusinessLayer\vetFoodShop.Cargo.BusinessLayer.csproj", "{513DAE79-75C5-49D8-993C-8EA4259A7404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Cargo.DataAccessLayer", "Services\Cargo\vetFoodShop.Cargo.DataAccessLayer\vetFoodShop.Cargo.DataAccessLayer.csproj", "{609FBF9A-FF73-49E3-B697-40BA0EB92793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Cargo.DataAccessLayer", "Services\Cargo\vetFoodShop.Cargo.DataAccessLayer\vetFoodShop.Cargo.DataAccessLayer.csproj", "{609FBF9A-FF73-49E3-B697-40BA0EB92793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Cargo.DtoLayer", "Services\Cargo\vetFoodShop.Cargo.DtoLayer\vetFoodShop.Cargo.DtoLayer.csproj", "{60698A42-5C18-49E3-9BC5-45A2B83EED26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Cargo.DtoLayer", "Services\Cargo\vetFoodShop.Cargo.DtoLayer\vetFoodShop.Cargo.DtoLayer.csproj", "{60698A42-5C18-49E3-9BC5-45A2B83EED26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Cargo.WebApi", "Services\Cargo\vetFoodShop.Cargo.WebApi\vetFoodShop.Cargo.WebApi.csproj", "{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vetFoodShop.Cargo.WebApi", "Services\Cargo\vetFoodShop.Cargo.WebApi\vetFoodShop.Cargo.WebApi.csproj", "{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{0F7A6AFA-EDB7-4EFA-B6C7-0ABAB2C3143D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.Basket", "Services\Basket\vetFoodShop.Basket\vetFoodShop.Basket.csproj", "{0B6038D3-73FE-4B51-8379-D90D18CCFB6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{E1C78FB5-52D4-4D7C-AB2A-8DF71BD88F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vetFoodShop.WebUI", "Frontends\vetFoodShop.WebUI\vetFoodShop.WebUI.csproj", "{6785BFEA-67E9-4845-BA6F-8863D5DB196B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +112,14 @@ Global
 		{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6038D3-73FE-4B51-8379-D90D18CCFB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6038D3-73FE-4B51-8379-D90D18CCFB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6038D3-73FE-4B51-8379-D90D18CCFB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6038D3-73FE-4B51-8379-D90D18CCFB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6785BFEA-67E9-4845-BA6F-8863D5DB196B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6785BFEA-67E9-4845-BA6F-8863D5DB196B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6785BFEA-67E9-4845-BA6F-8863D5DB196B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6785BFEA-67E9-4845-BA6F-8863D5DB196B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +144,9 @@ Global
 		{609FBF9A-FF73-49E3-B697-40BA0EB92793} = {D84384A6-5423-4BEC-9D85-498121F30A04}
 		{60698A42-5C18-49E3-9BC5-45A2B83EED26} = {D84384A6-5423-4BEC-9D85-498121F30A04}
 		{83BFD2D6-90C7-4254-BFF9-0F4EE350B89D} = {D84384A6-5423-4BEC-9D85-498121F30A04}
+		{0F7A6AFA-EDB7-4EFA-B6C7-0ABAB2C3143D} = {04A33F97-8FD4-4668-A18D-BEF556A44583}
+		{0B6038D3-73FE-4B51-8379-D90D18CCFB6D} = {0F7A6AFA-EDB7-4EFA-B6C7-0ABAB2C3143D}
+		{6785BFEA-67E9-4845-BA6F-8863D5DB196B} = {E1C78FB5-52D4-4D7C-AB2A-8DF71BD88F43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8153E818-E5A6-43FD-B5C0-04096A5B29FA}

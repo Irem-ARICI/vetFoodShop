@@ -15,6 +15,7 @@ namespace vetFoodShop.IdentityServer
             new ApiResource("ResourceCatalog"){Scopes={"CatalogFullPermission","CatalogReadPermission"} },
             new ApiResource("ResourceDiscount"){Scopes={"DiscountFullPermission"} },
             new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"} },
+            new ApiResource("ResourceBasket"){Scopes={"BasketFullPermission"} },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -31,6 +32,7 @@ namespace vetFoodShop.IdentityServer
             new ApiScope("CatalogReadPermission","Reading authority for catalog operations"),
             new ApiScope("DiscountFullPermission","Full authority for discount operation"),
             new ApiScope("OrderFullPermission","Full authority for order operation"),
+            new ApiScope("BasketFullPermission","Full authority for basket operation"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -51,7 +53,7 @@ namespace vetFoodShop.IdentityServer
             {
                 ClientId="vetFoodShopManagerId",
                 ClientName="vetFood Shop Manager User",
-                AllowedGrantTypes=GrantTypes.ClientCredentials,
+                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword, //ClientCredentials,
                 ClientSecrets={new Secret("vetfoodshopsecret".Sha256())},
                 AllowedScopes={"CatalogReadPermission", "CatalogFullPermission" }
             },
@@ -61,9 +63,9 @@ namespace vetFoodShop.IdentityServer
             {
                 ClientId="vetFoodShopAdminId",
                 ClientName="vetFood Shop Admin User",
-                AllowedGrantTypes=GrantTypes.ClientCredentials,
+                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword, //ClientCredentials,
                 ClientSecrets={new Secret("vetfoodshopsecret".Sha256())},
-                AllowedScopes={"CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermission",
+                AllowedScopes={"CatalogFullPermission", "CatalogReadPermission", "DiscountFullPermission", "OrderFullPermission", "BasketFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,
                 IdentityServerConstants.StandardScopes.Email,
                 IdentityServerConstants.StandardScopes.OpenId,
