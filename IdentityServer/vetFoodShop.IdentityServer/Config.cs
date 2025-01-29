@@ -45,7 +45,8 @@ namespace vetFoodShop.IdentityServer
                 ClientName="vetFood Shop Visitor User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("vetfoodshopsecret".Sha256())},
-                AllowedScopes={"CatalogReadPermission"}
+                AllowedScopes={"CatalogReadPermission"},
+                AccessTokenLifetime=600
             },
 
             //Manager

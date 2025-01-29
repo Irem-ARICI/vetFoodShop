@@ -1,0 +1,6 @@
+@vetFoodShop.Payment_HostAddress = http://localhost:5257
+
+GET {{vetFoodShop.Payment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

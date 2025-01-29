@@ -2,7 +2,7 @@
   "profiles": {
     "SelfHost": {
       "commandName": "Project",
-      "launchBrowser": false, // true
+      "launchBrowser": true, // true
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

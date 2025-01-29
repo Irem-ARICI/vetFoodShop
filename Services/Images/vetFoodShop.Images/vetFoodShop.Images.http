@@ -1,0 +1,6 @@
+@vetFoodShop.Images_HostAddress = http://localhost:5056
+
+GET {{vetFoodShop.Images_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

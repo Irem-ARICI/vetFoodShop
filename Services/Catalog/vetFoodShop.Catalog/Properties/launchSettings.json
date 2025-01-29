@@ -24,7 +24,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true, //true
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7070", // 7285
+      "applicationUrl": "http://localhost:7070", // 7285      https di sildim onu
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
